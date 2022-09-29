@@ -1,0 +1,62 @@
+.video {
+    width: 15%;
+    padding: 0.5rem;
+    background: #000;
+    cursor: pointer;
+    position: relative;
+}
+
+.videoName {
+    margin: 0.5rem 0;
+}
+
+.videoName:hover {
+    color: #00b3e5;
+}
+
+.playIcon {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    right: 0px;
+    margin-left: auto;
+    top: 43%;
+    transform: translateY(-50%);
+    margin-right: auto;
+    text-align: center;
+    background-color: rgba(0, 179, 229, 0.8);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 255, 255);
+    opacity: 0;
+}
+
+.video:hover .playIcon {
+    opacity: 1;
+    transition: all .7s ease;
+}
+
+.video:hover .videoName {
+    color: #00b3e5;
+}
+
+.video:hover .thumbnail {
+    transform: scale(1.2);
+    transition: all .7s ease;
+}
+
+@media (max-width: 1200px) {
+    .video {
+        width: 30%;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+    .video {
+        width: 100%;
+        flex-direction: column;
+    }
+}
